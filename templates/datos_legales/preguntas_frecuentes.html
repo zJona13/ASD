@@ -1,0 +1,313 @@
+{% extends 'layout.html' %}
+{% block titulo %}Golden Store{% endblock %}
+{% block custom_css %}
+    <link rel="stylesheet" href="../static/css/index.css">
+{% endblock %}
+
+{% block contenido %}
+    <section class="infoSeguridad">
+        <div>
+            <img src="../static/img/preguntasfrecuente.webp" class="img-fluid" alt="termino" id="img-banner" style="width: 100%;">
+        </div>
+        <div class="container-fluid pb-4">
+            <div class="row pt-3">
+                <h2 class="display-2 text-center" id="titulo"><b>PREGUNTAS FRECUENTES</b></h2>
+                <div class="linea"></div>
+            </div>
+    
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 id="subti"><b>Seguridad y pago</b></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-3">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <b>1. ¿Es seguro usar mi tarjeta de crédito en la web?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Sí, es completamente seguro utilizar tu tarjeta de crédito en nuestra plataforma. En
+                                        Golden Store, nos comprometemos a proteger la información de nuestros clientes.
+                                        Utilizamos medidas de seguridad avanzadas, como la encriptación SSL, para asegurar
+                                        que tus datos personales y de pago estén protegidos durante todo el proceso de
+                                        compra.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <b>2. ¿Puedo pagar en cuotas?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Sí, en Golden Store ofrecemos opciones de pago a plazos para brindarte
+                                        flexibilidad en tus compras. Puedes consultar las condiciones específicas y las
+                                        tasas de interés asociadas con las opciones de pago a plazos durante el proceso
+                                        de pago al realizar tu compra.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                        <b>3.¿Puedo usar cualquier método de pago?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        En Golden Store, ofrecemos diversas opciones de métodos de pago para brindarte
+                                        conveniencia y flexibilidad en tus compras. Algunos de los métodos de pago
+                                        disponibles incluyen: Tarjetas de Crédito, tarjetas de Débito, pago en
+                                        Cuotas.Algunos métodos de pago pueden estar sujetos a restricciones geográficas.
+                                        Durante el proceso de pago, asegúrese de verificar la disponibilidad de los métodos
+                                        de pago específicos en su ubicación.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <h4 id="subti"><b>Recojo de productos</b></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-3">
+    
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <b>1. ¿Sí deseo retirar mi pedido en algunas tiendas, debo llevar el comprobante y
+                                            mi DNI?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Sí, para retirar tu pedido en una tienda física, será necesario presentar algunos
+                                        documentos para garantizar la seguridad y correcta entrega de tus productos. Aquí
+                                        están los detalles: <br>
+    
+                                        <b>Comprobante de compra:</b> Debes llevar contigo el comprobante de compra, ya sea
+                                        impreso
+                                        o en formato digital. Este documento incluye la información esencial de tu pedido,
+                                        como el número de pedido y los productos adquiridos. <br>
+    
+                                        <b> Documento de Identidad (DNI):</b> Es importante presentar un documento de
+                                        identificación
+                                        válido, como tu Documento Nacional de Identidad (DNI) u otro documento oficial con
+                                        fotografía. Esto ayudará a verificar tu identidad y garantizar que estás autorizado
+                                        para retirar el pedido.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <b>2. Sí me olvido de ingresar los datos de la persona que recogerá mi pedido, ¿Qué
+                                            debo hacer?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Si olvidaste ingresar los datos de la persona que recogerá tu pedido, te recomiendo
+                                        seguir estos pasos:
+                                        <br>
+                                        <b>Contacta a Atención al Cliente:</b>
+                                        Comuníquese de inmediato con el servicio de atención al cliente de Golden Store.
+                                        Proporciona el número de orden y explica que necesitas corregir o agregar los datos
+                                        de la persona que recogerá el pedido. <br>
+                                        <b>Proporciona la información correcta:</b>
+                                        Suministre los detalles completos de la persona autorizada para recoger el pedido,
+                                        incluyendo el nombre completo y, si es necesario, el número de identificación. <br>
+                                        <b>Confirmación de la Actualización:</b>
+                                        Asegúrese de obtener una confirmación de que la información ha sido corregida en el
+                                        sistema.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <h4 id="subti"><b>Devoluciones</b></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-3">
+    
+                        <div class="accordion" id="accordionPanelsStayOpenExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne">
+                                        <b>1. ¿A dónde debo comunicarme para inicar un proceso de devolución?</b>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        Para iniciar un proceso de devolución en Golden Store, te recomiendo seguir estos
+                                        pasos: <br>
+    
+                                        <b>Consulta la Política de Devoluciones:</b>
+                                        Antes de iniciar el proceso, revisa cuidadosamente la política de devoluciones de
+                                        Golden Store para asegurarte de cumplir con los requisitos y plazos establecidos.
+                                        <br>
+    
+                                        <b>Encuentra Información en el Sitio Web:</b>
+                                        Busca información en el sitio web de Golden Store sobre cómo iniciar una devolución.
+                                        Por lo general, esta información se encuentra en la sección de "Atención al
+                                        Cliente", "Devoluciones" o términos similares. <br>
+    
+                                        <b>Comunícate por Correo Electrónico o Teléfono:</b>
+                                        Puedes comunicarte con el servicio de atención de al cliente de Golden Store a
+                                        través de correo electrónico o por teléfono. Encuentra la dirección de correo
+                                        electrónico o el número telefónico de atención al cliente en la sección de contacto
+                                        del sitio web. <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseTwo">
+                                        <b>2. ¿Ya no deseo los artíulos que pedí, me pueden devolver mi dinero?</b>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Sí, puedes solicitar un reembolso si ya no deseas los artículos que pediste. Para
+                                        iniciar el proceso de devolución y obtener tu dinero de vuelta, sigue estos pasos:
+    
+                                        Revisa la Política de Devoluciones,
+                                        comuníquese con el servicio de atención al cliente de Golden Store lo antes posible,
+                                        explica la Razón de la Devolución, siga las Instrucciones del Equipo de Atención al
+                                        Cliente.
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree">
+                                        <b>3. ¿Realicé mi compra y no he recibido el correo de confimación?</b>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Si ha realizado una compra y no ha recibido el correo de confirmación, aquí hay
+                                        algunos pasos que puede seguir para abordar esta situación: <br>
+    
+                                        Revisa la Carpeta de Correo no Deseado o Spam:
+    
+                                        A veces, los correos de confirmación pueden ser filtrados incorrectamente en la
+                                        carpeta de correo no deseado o spam. Revise estas carpetas para asegurarse de que el
+                                        correo de confirmación no esté allí. <br>
+                                        Confirma la Dirección de Correo Electrónico:
+    
+                                        Verifica que proporciones la dirección de correo electrónico correcta durante el
+                                        proceso de compra. Si la dirección de correo electrónico es incorrecta, es posible
+                                        que no recibas la confirmación. <br>
+                                        Contacta al Servicio de Atención al Cliente:
+    
+                                        Comuníquese con el servicio de atención al cliente de Golden Store tan pronto como
+                                        sea posible. Proporciona la información de tu compra, como el número de pedido, y
+                                        explica la situación. El equipo de atención al cliente podrá verificar el estado de
+                                        su pedido y reenviar el correo de confirmación si es necesario. <br>
+                                        Revisa tu Cuenta en el Sitio Web:
+    
+                                        Inicia sesión en tu cuenta en el sitio web de Golden Store y verifica el estado de
+                                        tu pedido. Algunas tiendas proporcionan información detallada sobre los pedidos
+                                        directamente en la cuenta del usuario. <br>
+                                        Configuraciones ajustadas de Correo Electrónico:
+    
+                                        Asegúrese de que las configuraciones de su proveedor de correo electrónico le
+                                        permitan recibir correos electrónicos de Golden Store. Agrega la dirección de correo
+                                        electrónico de Golden Store a tu lista de contactos seguros. <br>
+                                        Verifica el Estado de la Compra:
+    
+                                        Si tienes un perfil en la tienda en línea, verifica el historial de compras o el
+                                        estado del pedido en la plataforma web para confirmar que la transacción se haya
+                                        completado correctamente.
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree">
+                                        <b>4. ¿Por qué se ha cancelado mi pedido?</b>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Lo siento por cualquier inconveniente que pueda haber causado la cancelación de tu
+                                        pedido. Las razones por las cuales un pedido puede ser cancelado pueden variar y
+                                        dependerán de las políticas específicas de Golden Store. Aquí hay algunas posibles
+                                        razones:
+    
+                                        Problemas de Inventario:
+    
+                                        Puede haber casos en los que un artículo que se ha solicitado ya no esté disponible
+                                        debido a problemas de inventario. En este caso, la tienda podría cancelar el pedido
+                                        y reembolsarte.
+                                        Problemas de pago:
+    
+                                        Si hubo un problema con el procesamiento del pago, como información de tarjeta de
+                                        crédito incorrecta o insuficiente, la tienda puede cancelar el pedido.
+                                        Errores en la Información del Cliente:
+    
+                                        La información proporcionada durante el proceso de compra, como la dirección de
+                                        envío incorrecta o incompleta, podría llevar a la cancelación del pedido.
+                                        Incumplimiento de Políticas de la Tienda:
+    
+                                        Si tu pedido viola alguna política de Golden Store, como términos de servicio o
+                                        condiciones de compra, podría ser cancelado.
+                                        Problemas Técnicos:
+    
+                                        En algunos casos, problemas técnicos o errores en el sistema de pedidos podrían
+                                        llevar a la cancelación involuntaria de un pedido.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </section>
+{% endblock %}
+
+{% block custom_js %}
+    <script src="../static/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+{% endblock %}

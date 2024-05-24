@@ -1,0 +1,178 @@
+{% extends 'layout.html' %}
+{% block titulo %}Ropa de Mujer{% endblock %}
+{% block custom_css %}
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/mujer.css">
+{% endblock %}
+{% block contenido %}
+    <section class="infoSeguridad pb-4">
+        <div>
+            <div class="position-relative">
+                <img src="../static/img/banner2.webp" style="width: 100%; height: 400px;" class="img-fluid" alt="termino" id="img-banner">
+                <div class="position-absolute top-50 start-50 translate-middle text-center">
+                    <h2 class="text-white" id="banner-titulo" style="font-size: 60px;">ROPA DE MUJER</h2>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row pt-4">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('index') }}" class="text-decoration-none" style="font-weight: 300;"><i class="fa fa-home"></i>&nbsp;&nbsp;Inico</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Mujer</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-2 category-item">
+                    <img src="../static/img/polos_mujer.webp" alt="Polos Básicos">
+                    <p>Polos</p>
+                </div>
+                <div class="col-6 col-md-2 category-item">
+                    <img src="../static/img/faldas.webp" alt="Faldas">
+                    <p>Faldas</p>
+                </div>
+                <div class="col-6 col-md-2 category-item">
+                    <img src="../static/img/shorts.webp" alt="Shorts">
+                    <p>Shorts</p>
+                </div>
+                <div class="col-6 col-md-2 category-item">
+                    <img src="../static/img/blusas.webp" alt="Blusas">
+                    <p>Blusas</p>
+                </div>
+                <div class="col-6 col-md-2 category-item">
+                    <img src="../static/img/casaca_mujer.webp" alt="Casacas">
+                    <p>Casacas</p>
+                </div>
+                <div class="col-6 col-md-2 category-item">
+                    <img src="../static/img/jeans_mujer.webp" alt="Jeans">
+                    <p>Jeans</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <h5 class="mb-3">Categoría</h5>
+                    <!-- Categoria -->
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action" style="font-weight: 600;">Talla</a>
+                        <a href="#" class="list-group-item list-group-item-action" style="font-weight: 600;">Color</a>
+                        <a href="#" class="list-group-item list-group-item-action" style="font-weight: 600;">Marca</a>
+                        <a href="#" class="list-group-item list-group-item-action" style="font-weight: 600;">Fit</a>
+                        <a href="#" class="list-group-item list-group-item-action" style="font-weight: 600;">Precio</a>
+                        <a href="#" class="list-group-item list-group-item-action" style="font-weight: 600;">Descuento</a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5>8 productos</h5>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Ordenar por
+                            </button>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                            <!-- Agregar más -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Product 1 -->
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../static/img/product8.webp">
+                                        <img class="pic-2" src="../static/img/product8-hover.webp">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-random"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h5 class="card-title" style="font-size: 80%; font-weight: bold;">XIOMI</h5>
+                                    <p class="card-text">Top Mujer Hana Negro</p>
+                                    <p class="card-text" style="color: red;">S/34.95</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../static/img/product9.webp">
+                                        <img class="pic-2" src="../static/img/product9-hover.webp">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-random"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h5 class="card-title" style="font-size: 80%; font-weight: bold;">42AROZINA</h5>
+                                    <p class="card-text">pantalones mujer cargo de secado rápido</p>
+                                    <p class="card-text" style="color: red;">S/45.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../static/img/product10.webp">
+                                        <img class="pic-2" src="../static/img/product10-hover.webp">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-random"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h5 class="card-title" style="font-size: 80%; font-weight: bold;">SYBILLA</h5>
+                                    <p class="card-text">Casaca Casual Mujer Sybilla</p>
+                                    <p class="card-text" style="color: red;">S/60.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Agregar más -->
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">1</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block custom_js %}
+    <script src="../static/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+{% endblock %}

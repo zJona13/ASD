@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block titulo %}Detalle del Producto{% endblock %}
+{% block contenido %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img class="pic-1" style="width: 27rem;" src="{{ url_for('static', filename='assets/'+producto[1]) }}" alt="Imagen del producto">
+
+        </div>
+        <div class="col-md-6">
+            <h2>{{ producto[2] }}</h2>
+            <p>{{ producto[3] }}</p>
+            <p><strong>Talla:</strong> {{ producto[4] }}</p>
+            <p><strong>Precio:</strong> S/{{ producto[5] }}</p>
+            <p><strong>Descuento:</strong> {{ producto[6] }}%</p>
+            <p><strong>Precio Final:</strong> S/{{ producto[7] }}</p>
+            <p><strong>Status:</strong> {{ producto[8] }}</p>
+            <p><strong>Categoría:</strong> {{ producto[9] }}</p>
+            <!-- Formulario para agregar al carrito -->
+            <form id="add-to-cart-form">
+                <input type="hidden" name="product_id" value="{{ producto[0] }}">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" value="1" min="1">
+                <button type="submit" class="btn btn-success">Agregar al carrito</button>
+            </form>
+            <a href="{{ url_for('hombre') }}" class="btn btn-primary">Volver</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('add-to-cart-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+        fetch('/add_to_cart', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            // Opcional: Actualizar el número de elementos en el carrito en la interfaz de usuario
+        })
+        .catch(error => console.error('Error:', error));
+    });
+</script>
+{% endblock %}

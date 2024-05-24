@@ -1,0 +1,254 @@
+{% extends 'layout.html' %}
+{% block titulo %}Golden Store{% endblock %}
+{% block custom_css %}
+    <link rel="stylesheet" href="../static/css/index.css">
+{% endblock %}
+
+{% block contenido %}
+    <!-- Carrusel -->
+    <section>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../static/img/banner1.webp" class="d-block w-100" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-size: 100px;">ROPA DE HOMBRE</h5>
+                        <p style="font-size: 30px;">DESCUENTO EN TODOS LOS PRODUCTOS DE HOMBRES | 2 X 1 SALE</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../static/img/banner2.webp" class="d-block w-100" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-size: 100px;">ROPA DE MUJER</h5>
+                        <p style="font-size: 30px;">DESCUENTO EN TODOS LOS PRODUCTOS DE MUJERES | 2 X 1 SALE</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Novedas y Tendencias -->
+    <section class="productsNov">
+        <div class="m-4">
+            <h2 style="font-weight: 700;">NOVEDADES / TENDENCIAS</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="../static/img/product1.webp">
+                                <img class="pic-2" src="../static/img/product1-hover.webp">
+                            </a>
+                            <ul class="product-links">
+                                <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-random"></i></a></li>
+                                <li><a href="#"><i class="fa fa-search"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h5 class="card-title" style="font-size: 80%; font-weight: bold;">GUCCI</h5>
+                            <p class="card-text">Blusa Blanca Manga Larga</p>
+                            <p class="card-text" style="color: red;">S/60.00</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="../static/img/product2.webp">
+                                <img class="pic-2" src="../static/img/product2-hover.webp">
+                            </a>
+                            <ul class="product-links">
+                                <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-random"></i></a></li>
+                                <li><a href="#"><i class="fa fa-search"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h5 class="card-title" style="font-size: 80%; font-weight: bold;">GUN'S</h5>
+                            <p class="card-text">Casaca Jean Azul</p>
+                            <p class="card-text" style="color: red;">S/80.00</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="../static/img/product3.webp">
+                                <img class="pic-2" src="../static/img/product3-hover.webp">
+                            </a>
+                            <ul class="product-links">
+                                <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-random"></i></a></li>
+                                <li><a href="#"><i class="fa fa-search"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h5 class="card-title" style="font-size: 80%; font-weight: bold;">TOMI</h5>
+                            <p class="card-text">Terno Formal Negro</p>
+                            <p class="card-text" style="color: red;">S/150.00</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="../static/img/product4.webp">
+                                <img class="pic-2" src="../static/img/product4-hover.webp">
+                            </a>
+                            <ul class="product-links">
+                                <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-random"></i></a></li>
+                                <li><a href="#"><i class="fa fa-search"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h5 class="card-title" style="font-size: 80%; font-weight: bold;">DESTROY'S</h5>
+                            <p class="card-text">Camisa De Mujer Azulino con Blanco</p>
+                            <p class="card-text" style="color: red;">S/50.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coleccion -->
+    <section>
+        <div class="ms-4 mt-5 coleccion">
+            <h2 style="font-weight: 700;">COLECCIONES</h2>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide pt-5">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../static/img/banner1-coleccion.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../static/img/banner2-coleccion.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../static/img/banner3-coleccion.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../static/img/banner4-coleccion.webp" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Ofertas y Descuentos -->
+    <section>
+        <div class="ms-4 mt-5 ofertas">
+            <h2 style="font-weight: 700;">OFERTAS / DESCUENTOS</h2>
+        </div>
+        <div class="mt-5">
+            <div class="banner">
+                <h1 style="font-size: 80px;">Summer Hot Sale <span style="color: red;">50%</span></h1>
+                <br>
+                <div id="countdown" class="countdown">
+                    <span id="days"></span> DIAS
+                    <span id="hours"></span> HORA
+                    <span id="minutes"></span> MINUTOS
+                    <span id="seconds"></span> SEGUNDOS
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información de Seguridad -->
+    <section class="infoSeguridad">
+        <div class="container">
+            <div class="row pt-5 pb-5">
+                <div class="col-lg-1 col-md-2 col-sm-5 d-flex justify-content-center">
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-car" id="gra" style="color: #000000; font-size: 60px;"></i> </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-7 d-flex justify-content-center">
+                    <p class="card-text"><b>Envío gratis</b> <br>Para todo los productos superiores a S/50</p>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-5 d-flex justify-content-center">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-money-bill" id="gra" style="color: #000000; font-size: 60px;"></i> </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-7 d-flex justify-content-center">
+                    <p class="card-text"><b>Garantía de Devolución</b> <br>Máximo de 30 días calendarios contados</p>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-5 d-flex justify-content-center">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-handshake" id="gra" style="color: #000000; font-size: 60px;"></i> </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-7 d-flex justify-content-center">
+                    <p class="card-text"><b>Atención al Cliente</b> <br>Soporte las 24 horas 7 días a la semana</p>
+                </div>
+                <div class="col-lg-1  col-md-2 col-sm-5 d-flex justify-content-center">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-landmark" id="gra" style="color: #000000; font-size: 60px;"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-7 d-flex justify-content-center">
+                    <p class="card-text"><b>Pago Seguro</b> <br>Pago 100% seguro con encriptación SSL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block custom_js %}
+    <script src="../static/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+{% endblock %}
+
+    
+    

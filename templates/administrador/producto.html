@@ -1,0 +1,56 @@
+{% extends "administrador/admin_home.html" %}
+{% block contenido_Producto %}
+
+<h1>PRODUCTOS</h1>
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <a href="{{url_for('formulario_agregar_producto')}}" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Agregar</a>
+            </div>
+            <table class="table table table-striped table-bordered table-hover table-sm">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Nombre Producto</th>
+                        <th>Descripcion</th>
+                        <th>Talla</th>
+                        <th>Monto</th>
+                        <th>Descuento</th>
+                        <th>Monto Total</th>
+                        <th>status</th>
+                        <th>Categoria</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {% for producto in productos %}
+                    <tr>
+                       
+                        <td>{{producto[1]}}</td>
+                        <td>{{producto[2]}}</td>
+                        <td>{{producto[3]}}</td>
+                        <td>{{producto[4]}}</td>
+                        <td>{{producto[5]}}</td>
+                        <td>{{producto[6]}}</td>
+                        <td>{{producto[7]}}</td>
+                        <td>{{producto[8]}}</td>
+                        <td>
+                            {# Pasar el id (lo que hay en alumno[0] #}
+                            <a href="{{url_for('editar_producto', id=producto[0])}}" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
+                        </td>
+                        <td>
+                            <form action="{{url_for('eliminar_producto')}}" method="POST">
+                                <input type="hidden" name="id" value="{{producto[0]}}">
+                                <button class="btn btn-danger btn-delete" ><i class="fa-solid fa-trash"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

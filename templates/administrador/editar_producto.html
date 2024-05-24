@@ -1,0 +1,80 @@
+{% extends "administrador/admin_home.html" %}
+{% block titulo %}
+Editar Producto
+{% endblock %}
+{% block contenido_Producto %}
+
+<div class="card card-body">
+    <h3 class="is-size-3">Editar Producto</h3>
+    <form action="{{url_for('actualizar_producto')}}" method="post">
+
+        <input type="hidden" name="id" value="{{producto[0]}}">
+
+        <div class="form-group p-1">
+            <label for="imagen">Seleccionar nueva imagen</label>
+                <input type="file" class="input form-control" name="imagen" id="imagen" value="{{producto[1]}}">
+        </div>
+
+        <div class="form-group p-1">
+            <label for="nombreProducto">Nombre del Producto:</label>
+                <input required type="text" class="input" placeholder="Nombre" name="nombreProducto" id="nombreProducto"
+                    value="{{producto[2]}}">
+        </div>
+
+        <div class="form-group p-1">
+            <label for="descripcion">Descripcion del Producto</label>
+                <input required type="text" class="input" placeholder="Descripcion" name="descripcion" id="descripcion"
+                    value="{{producto[3]}}">
+        </div>
+
+        <div class="form-group p-1">
+            <label for="talla">Talla:</label>
+            <input required type="text" class="input" placeholder="Talla" name="talla" id="talla"
+                value="{{producto[4]}}">
+        </div>
+
+        <div class="form-group p-1">
+            <label for="monto">Monto:</label>
+            <input required type="text" class="input" placeholder="Monto" name="monto" id="monto"
+                value="{{producto[5]}}">
+        </div>
+        
+        <div class="form-group p-1">
+            <label for="descuento">Descuento:</label>
+            <input required type="text" class="input" placeholder="Descuento" name="descuento" id="descuento"
+                value="{{producto[6]}}">
+        </div>
+        
+        <div class="form-group p-1">
+            <label for="monto_total">Monto Total:</label>
+            <input required type="text" class="input" placeholder="Monto Total" name="monto_total" id="monto_total"
+                value="{{producto[7]}}">
+        </div>
+
+        <div class="form-group p-1">
+            <label for="status">Estado:</label>
+            <input required type="text" class="input" placeholder="Estado" name="status" id="status"
+                value="{{producto[8]}}">
+        </div>
+
+        <div class="form-group p-1">
+            <label for="id_Categoria">CATEGORIA:</label>
+            <select required class="input" name="id_Categoria" id="id_Categoria">
+                <option value="">Selecciona una categoría</option>
+                {% for categoria in tipos_categorias %}
+                <option value="{{ categoria[0] }}" {% if categoria[0]==producto[9] %} selected {% endif %}>{{
+                    categoria[1] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group p-1 d-grid">
+            <button type="submit" class="btn btn-success">Guardar</button>
+        </div>
+      
+         <div class="form-group p-1 d-grid">
+            <a href="{{url_for('productos')}}" class="btn btn-primary">Volver</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

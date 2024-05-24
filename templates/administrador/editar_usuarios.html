@@ -1,0 +1,99 @@
+{% extends "administrador/admin_home.html" %}
+{% block titulo %}
+Editar usuario
+{% endblock %}
+{% block contenido %}
+
+<div class="card card-body">
+    <h3 class="is-size-3 mb-4">Editar Usuario</h3>
+  
+    <form action="{{url_for('actualizar_usuario')}}" method="POST">
+        
+        <input type="hidden" name="id" value="{{usuario[0]}}">
+      
+    <div class="form-group p-1">
+        <label for="numeroDocumento">Numero de Documento:</label>
+        <input required type="text" class="input form-control" placeholder="Numero de Documento" name="numeroDocumento" id="numeroDocumento"
+                    value="{{usuario[1]}}">
+      </div>
+  
+      <div class="form-group p-1">
+        <label for="nombres">Nombres del usuario:</label>
+        <input required type="text" class="input form-control" placeholder="Nombres del usuario" name="nombres" id="nombres"
+                    value="{{usuario[2]}}">
+      </div>
+  
+      <div class="form-group p-1">
+        <label for="apellidos">Apellidos de usuario:</label>
+        <input required type="text" class="input form-control" placeholder="Apellidos del usuario" name="apellidos"
+                    id="apellidos" value="{{usuario[3]}}">
+      </div>
+  
+      <div class="form-group p-1">
+        <label for="usuario">Nombre de usuario</label>
+        <input required type="text" class="input form-control" placeholder="Nombre de usuario" name="usuario"
+                    id="usuario" value="{{usuario[4]}}">
+      </div>
+  
+      <div class="form-group p-1">
+        <label for="email">Email</label>
+        <input required type="text" class="input form-control" placeholder="Email" name="email" id="email"
+                    value="{{usuario[5]}}">
+      </div>
+  
+      <div class="form-group p-1">
+        <label for="contraseña">Contraseña</label>
+        <input required type="text" class="input form-control" placeholder="Contraseña" name="contraseña" id="contraseña"
+                    value="{{usuario[6]}}">
+      </div>
+  
+      <div class="form-group p-1">
+        <label for="telefono">Telefono</label>
+        <input required type="text" class="input form-control" placeholder="Telefono" name="telefono" id="telefono"
+                    value="{{usuario[7]}}">
+      </div>
+  
+      <div class="form-group p-1">
+        <label for="fechaNacimiento">Fecha de nacimiento</label>
+        <input required type="text" class="input form-control" placeholder="Fecha de nacimiento" name="fechaNacimiento"
+                    id="fechaNacimiento" value="{{usuario[8]}}">
+      </div>
+      <div class="form-group p-1">
+        <label for="status">Estado</label>
+        <input required type="text" class="input form-control" placeholder="Estado" name="status" id="status"
+                    value="{{usuario[9]}}">
+      </div>
+  
+      <div class="form-group p-1">
+        <label for="id_TipoUsuario">Tipo de Usuario</label>
+        <select required class="input form-control" name="id_TipoUsuario" id="id_TipoUsuario">
+            <option value="">Selecciona un tipo de usuario</option>
+            {% for tipo_usuario in tipos_usuario %}
+            <option value="{{ tipo_usuario[0] }}" {% if tipo_usuario[0]==usuario[10] %} selected {% endif %}>{{
+                tipo_usuario[1] }}</option>
+            {% endfor %}
+        </select>
+      </div>
+  
+      <div class="form-group p-1">
+        <label for="id_TipoDocumento">Tipo de Documento</label>
+        <select required class="input form-control" name="id_TipoDocumento" id="id_TipoDocumento">
+            <option value="">Selecciona un tipo de documento</option>
+            {% for tipo_documento in tipos_documento %}
+            <option value="{{ tipo_documento[0] }}" {% if tipo_documento[0]==usuario[11] %} selected {% endif
+                %}>{{ tipo_documento[1] }}</option>
+            {% endfor %}
+        </select>
+      </div>
+  
+      <div class="form-group p-1 d-grid">
+        <button type="submit" class="btn btn-success">Guardar</button>
+      </div>
+  
+      <div class="form-group p-1 d-grid">
+        <a href="{{url_for('usuarios')}}" class="btn btn-primary">Volver</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

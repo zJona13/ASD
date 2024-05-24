@@ -1,0 +1,58 @@
+{% extends "administrador/admin_home.html" %}
+{% block titulo %}
+Agregar Producto
+{% endblock %}
+{% block contenido_Producto %}
+<div class="card card-body">
+    <h3 class="is-size-3">Agregar Producto</h3>
+    <form action="{{url_for('guardar_producto')}}" method="post" enctype="multipart/form-data">
+        <div class="form-group p-1">
+            <label for="nombreProducto">Nombre del Producto:</label>
+            <input required type="text" class="input form-control" placeholder="Nombres del Producto" name="nombreProducto" id="nombreProducto" />
+        </div>
+        <div class="form-group p-1">
+            <label for="descripcion">Descripcion:</label>
+            <input required type="text" class="input form-control" placeholder="Descripcion del Producto" name="descripcion" id="descripcion">
+        </div>
+        <div class="form-group p-1">
+            <label for="talla">Talla del Producto:</label>
+            <input required type="text" class="input form-control" placeholder="Talla del Producto" name="talla" id="talla">
+        </div>
+        <div class="form-group p-1">
+            <label for="monto">Precio del Producto:</label>
+            <input required type="text" class="input form-control" placeholder="Precio" name="monto" id="monto">
+        </div>
+        <div class="form-group p-1">
+            <label for="descuento">Descuento del Producto:</label>
+            <input required type="text" class="input form-control" placeholder="Descuento" name="descuento" id="descuento">
+        </div>
+        <div class="form-group p-1">
+            <label for="monto_total">Precio Final:</label>
+            <input required type="text" class="input form-control" placeholder="Precio Total" name="monto_total" id="monto_total">
+        </div>
+        <div class="form-group p-1">
+            <label for="status">Status del Producto:</label>
+            <input required type="text" class="input form-control" placeholder="Status" name="status" id="status">
+        </div>
+        <div class="form-group p-1">
+            <label for="imagen">Imagen del Producto:</label>
+            <input required type="file" class="input form-control" name="imagenes" id="imagen">
+        </div>
+        <div class="form-group p-1">
+            <label for="id_Categoria">ID CATEGORIA:</label>
+            <select required class="input form-control" name="id_Categoria" id="id_Categoria">
+                <option value="">Selecciona una categoría</option>
+                {% for categoria in categorias %}
+                    <option value="{{ categoria[0] }}">{{ categoria[1] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group p-1 d-grid">
+            <button type="submit" class="btn btn-success">Guardar</button>
+        </div>
+        <div class="form-group p-1 d-grid">
+            <a href="{{url_for('productos')}}" class="btn btn-primary">Volver</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

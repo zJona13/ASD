@@ -1,0 +1,94 @@
+<!-- {% extends 'layout.html' %}
+{% block titulo %}Carrito{% endblock %}
+{% block custom_css %}
+<link rel="stylesheet" href="../static/css/index.css">
+<link rel="stylesheet" href="../static/css/carrito.css">
+{% endblock %}
+{% block contenido %}
+<section class="infoSeguridad pb-4">
+    <div class="container">
+        <div class="row pt-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('index') }}" class="text-decoration-none"
+                            style="font-weight: 300;"><i class="fa fa-home"></i>&nbsp;&nbsp;Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Carrito de Compras</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h2>Carrito de Compras</h2>
+        <div class="row">
+            <div class="col-lg-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        {% if cart %}
+                        {% for product_id, product in cart.items() %}
+                        <tr>
+                            <td>{{ product.nombre }}</td>
+                            <td>${{ product.precio }}</td>
+                            <td>{{ product.cantidad }}</td>
+                            <td>${{ product.precio * product.cantidad }}</td>
+                            <td><button class="btn btn-danger"
+                                    onclick="removeFromCart('{{ product_id }}');">Eliminar</button></td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <tr>
+                            <td colspan="5">Tu carrito está vacío</td>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-4">
+                <div class="p-3 mb-3 bg-light rounded">
+                    <h4>RESUMEN DE LA ORDEN</h4>
+                    <ul class="list-unstyled">
+                        {% for product_id, product in cart.items() %}
+                        <li>{{ product.nombre }} - ${{ product.precio }} x {{ product.cantidad }}</li>
+                        {% endfor %}
+                        <li><strong>Total:</strong> ${{ total }}</li>
+                    </ul>
+                    <button id="checkout" class="btn btn-warning btn-block"><i
+                            class="fa-solid fa-credit-card"></i>&nbsp;&nbsp;IR A PAGAR</button>
+                </div>
+                <div class="p-3 mb-3 bg-light rounded">
+                    <h4>CÓDIGO DE DESCUENTO</h4>
+                    <input type="text" id="discount-code" class="form-control mb-2"
+                        placeholder="Ingresar código de cupón">
+                    <button id="apply-discount" class="btn btn-warning btn-block"><i
+                            class="fa-solid fa-ticket"></i>&nbsp;&nbsp;APLICAR</button>
+                    <p class="mt-2">• INGRESAR CUPÓN PARA OBTENER UN DESCUENTO.<br>
+                        • SOLO CUPONES VÁLIDOS.<br>
+                        • SI TIENE ALGÚN PROBLEMA CONTACTARSE CON ATENCIÓN AL CLIENTE.</p>
+                </div>
+            </div>
+        </div>
+        <button id="clear-cart" class="btn btn-danger mt-3"><i class="fa-solid fa-trash"></i>&nbsp;&nbsp;Vaciar
+            Carrito</button>
+    </div>
+</section>
+{% endblock %}
+
+{% block custom_js %}
+<script src="../static/js/carrito.js"></script>
+<script src="../static/js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+{% endblock %} -->
